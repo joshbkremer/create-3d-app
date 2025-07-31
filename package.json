@@ -1,7 +1,7 @@
 {
   "name": "create-3d-app",
   "version": "0.1.0",
-  "homepage": "https://joshbkremer.gitlab.io/create-3d-app",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.x.x",

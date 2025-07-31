@@ -54,7 +54,7 @@ const Hero = () => {
           fontFamily: '"Nunito", sans-serif'
         }}
       >
-        Transform your child's drawings into beautiful 3D printed creatures they can paint and play with!
+        Transform your dreams into beautiful 3D printed creatures!
       </Typography>
       
       {/* Upload Area */}
