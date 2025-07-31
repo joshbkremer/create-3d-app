@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/create-3d-app/static/css/main.e47bfc3c.css",
-    "main.js": "/create-3d-app/static/js/main.cc163a98.js",
-    "static/js/453.eacdd94a.chunk.js": "/create-3d-app/static/js/453.eacdd94a.chunk.js",
-    "index.html": "/create-3d-app/index.html",
-    "main.e47bfc3c.css.map": "/create-3d-app/static/css/main.e47bfc3c.css.map",
-    "main.cc163a98.js.map": "/create-3d-app/static/js/main.cc163a98.js.map",
-    "453.eacdd94a.chunk.js.map": "/create-3d-app/static/js/453.eacdd94a.chunk.js.map"
+    "main.css": "./static/css/main.e47bfc3c.css",
+    "main.js": "./static/js/main.dafd6423.js",
+    "static/js/453.eacdd94a.chunk.js": "./static/js/453.eacdd94a.chunk.js",
+    "index.html": "./index.html",
+    "main.e47bfc3c.css.map": "./static/css/main.e47bfc3c.css.map",
+    "main.dafd6423.js.map": "./static/js/main.dafd6423.js.map",
+    "453.eacdd94a.chunk.js.map": "./static/js/453.eacdd94a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e47bfc3c.css",
-    "static/js/main.cc163a98.js"
+    "static/js/main.dafd6423.js"
   ]
 }
