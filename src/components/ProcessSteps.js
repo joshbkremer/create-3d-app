@@ -4,8 +4,7 @@ import {
   Typography,
   Card,
   CardContent,
-  CardMedia,
-  Grid
+  CardMedia
 } from '@mui/material';
 import { PROCESS_STEPS } from '../constants/steps';
 
@@ -83,7 +82,14 @@ const ProcessSteps = () => {
                     width="100%"
                     image={step.image}
                     alt={`Step ${index + 1} Image`}
-                    sx={{ objectFit: 'contain' }}
+                    sx={{ 
+                      objectFit: 'contain',
+                      minHeight: '100px'
+                    }}
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${step.image}`);
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </Box>
                 <Typography variant="body2" color="text.secondary" sx={{ 
