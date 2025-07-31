@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Box, Container } from '@mui/material';
+import {
+  Header,
+  Hero,
+  ProcessSteps,
+  Pricing,
+  Contact,
+  Footer,
+  Background
+} from './components';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ 
+      minHeight: '100vh', 
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
+      <Background />
+      
+      <Header />
+
+      <Container maxWidth="lg" sx={{ py: 4, position: 'relative', zIndex: 1 }}>
+        <Hero />
+        <ProcessSteps />
+        <Pricing />
+        <Contact />
+      </Container>
+
+      <Footer />
+    </Box>
   );
 }
 

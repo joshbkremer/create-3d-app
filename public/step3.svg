@@ -1,0 +1,96 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#2C3E50"/>
+  
+  <!-- 3D Model - Monochromatic with lighting -->
+  <!-- Dinosaur body - 3D effect -->
+  <ellipse cx="200" cy="180" rx="85" ry="45" fill="#95A5A6" stroke="#7F8C8D" stroke-width="2"/>
+  <ellipse cx="190" cy="175" rx="70" ry="35" fill="#BDC3C7" opacity="0.8"/>
+  
+  <!-- Dinosaur head - 3D effect -->
+  <ellipse cx="200" cy="135" rx="40" ry="30" fill="#95A5A6" stroke="#7F8C8D" stroke-width="2"/>
+  <ellipse cx="190" cy="130" rx="30" ry="22" fill="#BDC3C7" opacity="0.8"/>
+  
+  <!-- Dinosaur eyes - 3D effect -->
+  <circle cx="190" cy="130" r="6" fill="#ECF0F1"/>
+  <circle cx="210" cy="130" r="6" fill="#ECF0F1"/>
+  <circle cx="190" cy="130" r="3" fill="#2C3E50"/>
+  <circle cx="210" cy="130" r="3" fill="#2C3E50"/>
+  <circle cx="192" cy="128" r="1" fill="#FFFFFF"/>
+  <circle cx="212" cy="128" r="1" fill="#FFFFFF"/>
+  
+  <!-- Dinosaur mouth - 3D effect -->
+  <path d="M 185 150 Q 200 160 215 150" stroke="#7F8C8D" stroke-width="3" fill="none"/>
+  <path d="M 185 150 Q 200 155 215 150" stroke="#BDC3C7" stroke-width="1" fill="none"/>
+  
+  <!-- Dinosaur spikes - 3D effect -->
+  <polygon points="200,95 190,115 210,115" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <polygon points="180,105 170,125 190,125" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <polygon points="220,105 210,125 230,125" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <polygon points="190,100 180,120 200,120" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <polygon points="210,100 200,120 220,120" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  
+  <!-- Dinosaur legs - 3D effect -->
+  <rect x="170" y="200" width="10" height="35" fill="#95A5A6" stroke="#7F8C8D" stroke-width="1"/>
+  <rect x="190" y="200" width="10" height="35" fill="#95A5A6" stroke="#7F8C8D" stroke-width="1"/>
+  <rect x="210" y="200" width="10" height="35" fill="#95A5A6" stroke="#7F8C8D" stroke-width="1"/>
+  <rect x="230" y="200" width="10" height="35" fill="#95A5A6" stroke="#7F8C8D" stroke-width="1"/>
+  
+  <!-- Dinosaur feet - 3D effect -->
+  <ellipse cx="175" cy="240" rx="8" ry="5" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <ellipse cx="195" cy="240" rx="8" ry="5" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <ellipse cx="215" cy="240" rx="8" ry="5" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  <ellipse cx="235" cy="240" rx="8" ry="5" fill="#7F8C8D" stroke="#5D6D7E" stroke-width="1"/>
+  
+  <!-- Dinosaur tail - 3D effect -->
+  <path d="M 285 180 Q 330 155 360 175" stroke="#95A5A6" stroke-width="10" fill="none"/>
+  <path d="M 285 180 Q 330 155 360 175" stroke="#7F8C8D" stroke-width="2" fill="none"/>
+  
+  <!-- 3D Lighting effects -->
+  <!-- Main light source from top-left -->
+  <ellipse cx="180" cy="160" rx="50" ry="25" fill="#ECF0F1" opacity="0.3"/>
+  <ellipse cx="190" cy="125" rx="25" ry="15" fill="#ECF0F1" opacity="0.3"/>
+  
+  <!-- Shadow on ground -->
+  <ellipse cx="200" cy="250" rx="90" ry="20" fill="#34495E" opacity="0.4"/>
+  
+  <!-- Ground plane -->
+  <rect x="0" y="250" width="400" height="50" fill="#34495E" stroke="#2C3E50" stroke-width="1"/>
+  
+  <!-- 3D Grid lines for depth -->
+  <g stroke="#5D6D7E" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="250" x2="400" y2="250"/>
+    <line x1="0" y1="260" x2="400" y2="260"/>
+    <line x1="0" y1="270" x2="400" y2="270"/>
+    <line x1="0" y1="280" x2="400" y2="280"/>
+    <line x1="0" y1="290" x2="400" y2="290"/>
+    <line x1="0" y1="300" x2="400" y2="300"/>
+  </g>
+  
+  <!-- 3D Coordinate axes -->
+  <g stroke="#E74C3C" stroke-width="2">
+    <line x1="50" y1="250" x2="50" y2="200" marker-end="url(#arrowhead)"/>
+    <text x="45" y="195" fill="#E74C3C" font-size="12">Z</text>
+  </g>
+  <g stroke="#3498DB" stroke-width="2">
+    <line x1="50" y1="250" x2="100" y2="250" marker-end="url(#arrowhead)"/>
+    <text x="105" y="255" fill="#3498DB" font-size="12">X</text>
+  </g>
+  <g stroke="#2ECC71" stroke-width="2">
+    <line x1="50" y1="250" x2="50" y2="250" marker-end="url(#arrowhead)"/>
+    <text x="55" y="245" fill="#2ECC71" font-size="12">Y</text>
+  </g>
+  
+  <!-- 3D Model info -->
+  <text x="300" y="30" fill="#ECF0F1" font-size="14" font-family="monospace">3D MODEL</text>
+  <text x="300" y="50" fill="#BDC3C7" font-size="12" font-family="monospace">Vertices: 1,247</text>
+  <text x="300" y="70" fill="#BDC3C7" font-size="12" font-family="monospace">Faces: 892</text>
+  <text x="300" y="90" fill="#BDC3C7" font-size="12" font-family="monospace">Ready for print</text>
+  
+  <!-- Definitions for arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF"/>
+    </marker>
+  </defs>
+</svg> 
