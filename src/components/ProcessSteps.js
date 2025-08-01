@@ -27,13 +27,15 @@ const ProcessSteps = () => {
           <React.Fragment key={index}>
             <Card sx={{ 
               width: { xs: '100%', md: 400 },
-              height: { xs: 'auto', md: 520 },
+              minHeight: { xs: 'auto', md: 420 },
               background: 'rgba(255,255,255,0.95)',
               backdropFilter: 'blur(10px)',
               borderRadius: 2,
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
               transition: 'all 0.3s ease',
+              display: 'flex',
+              flexDirection: 'column',
               '&:hover': {
                 transform: 'translateY(-5px)',
                 boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
@@ -63,10 +65,10 @@ const ProcessSteps = () => {
                   {step.title}
                 </Typography>
               </Box>
-              <CardContent sx={{ p: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ p: 2, textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <Box sx={{ 
                   width: '100%', 
-                  height: 200, 
+                  height: { xs: 150, md: 200 }, 
                   background: '#f5f5f5',
                   borderRadius: 1,
                   mb: 2,
@@ -96,10 +98,8 @@ const ProcessSteps = () => {
                   lineHeight: 1.5, 
                   fontFamily: '"Nunito", sans-serif',
                   textAlign: 'center',
-                  fontSize: '0.85rem',
+                  fontSize: { xs: '0.8rem', md: '0.85rem' },
                   flexGrow: 1,
-                  display: 'flex',
-                  alignItems: 'center',
                   px: 1
                 }}>
                   {step.description}
@@ -136,13 +136,15 @@ const ProcessSteps = () => {
           <React.Fragment key={index + 2}>
             <Card sx={{ 
               width: { xs: '100%', md: 400 },
-              height: { xs: 'auto', md: 520 },
+              minHeight: { xs: 'auto', md: 420 },
               background: 'rgba(255,255,255,0.95)',
               backdropFilter: 'blur(10px)',
               borderRadius: 2,
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
               transition: 'all 0.3s ease',
+              display: 'flex',
+              flexDirection: 'column',
               '&:hover': {
                 transform: 'translateY(-5px)',
                 boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
@@ -172,10 +174,10 @@ const ProcessSteps = () => {
                   {step.title}
                 </Typography>
               </Box>
-              <CardContent sx={{ p: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ p: 2, textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <Box sx={{ 
                   width: '100%', 
-                  height: 200, 
+                  height: { xs: 150, md: 200 }, 
                   background: '#f5f5f5',
                   borderRadius: 1,
                   mb: 2,
@@ -198,10 +200,8 @@ const ProcessSteps = () => {
                   lineHeight: 1.5, 
                   fontFamily: '"Nunito", sans-serif',
                   textAlign: 'center',
-                  fontSize: '0.85rem',
+                  fontSize: { xs: '0.8rem', md: '0.85rem' },
                   flexGrow: 1,
-                  display: 'flex',
-                  alignItems: 'center',
                   px: 1
                 }}>
                   {step.description}
