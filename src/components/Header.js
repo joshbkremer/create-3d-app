@@ -23,23 +23,52 @@ const Header = () => {
     }}>
       <Toolbar>
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-          <PetsIcon sx={{ color: '#6366F1', fontSize: 32, mr: 1 }} />
-          <Typography variant="h6" sx={{ color: '#1F2937', fontWeight: 'bold', fontFamily: '"Quicksand", sans-serif' }}>
+          <PetsIcon sx={{ color: '#6366F1', fontSize: { xs: 24, md: 32 }, mr: 1 }} />
+          <Typography variant="h6" sx={{ 
+            color: '#1F2937', 
+            fontWeight: 'bold', 
+            fontFamily: '"Quicksand", sans-serif',
+            fontSize: { xs: '1rem', md: '1.25rem' }
+          }}>
             DREAM TO PAINT
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-          <Typography variant="body2" sx={{ color: '#1F2937', cursor: 'pointer' }}>
+        <Box sx={{ 
+          display: { xs: 'none', sm: 'flex' }, 
+          alignItems: 'center', 
+          gap: { xs: 1, sm: 2, md: 3 } 
+        }}>
+          <Typography variant="body2" sx={{ 
+            color: '#1F2937', 
+            cursor: 'pointer',
+            fontSize: { xs: '0.75rem', sm: '0.875rem' }
+          }}>
             Pricing
           </Typography>
-          <Typography variant="body2" sx={{ color: '#1F2937', cursor: 'pointer' }}>
+          <Typography variant="body2" sx={{ 
+            color: '#1F2937', 
+            cursor: 'pointer',
+            fontSize: { xs: '0.75rem', sm: '0.875rem' }
+          }}>
             Login
           </Typography>
-          <Button variant="outlined" sx={{ color: '#6366F1', borderColor: '#6366F1' }}>
+          <Button 
+            variant="outlined" 
+            size="small"
+            sx={{ 
+              color: '#6366F1', 
+              borderColor: '#6366F1',
+              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+              px: { xs: 1, sm: 2 }
+            }}
+          >
             Register
           </Button>
-          <FormControl size="small" sx={{ minWidth: 100 }}>
-            <Select value="English" sx={{ color: '#1F2937' }}>
+          <FormControl size="small" sx={{ minWidth: { xs: 80, sm: 100 } }}>
+            <Select value="English" sx={{ 
+              color: '#1F2937',
+              fontSize: { xs: '0.75rem', sm: '0.875rem' }
+            }}>
               <MenuItem value="English">English</MenuItem>
             </Select>
           </FormControl>
