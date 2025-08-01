@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
+import { generateCreatureImage, generateMockCreatureImage } from '../services/geminiApi';
 
 export const useImageUpload = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
+  const [generatedImage, setGeneratedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const fileInputRef = useRef(null);
@@ -33,16 +35,32 @@ export const useImageUpload = () => {
 
     setIsLoading(true);
     setError('');
+    setGeneratedImage(null);
 
     try {
-      // Simulate AI image generation and 3D printing process
-      await new Promise(resolve => setTimeout(resolve, 4000));
+      let result;
       
-      // For demo purposes, we'll use the uploaded image as the "generated" image
-      // In a real implementation, this would be the AI-generated 3D model
-      console.log('3D creature created successfully!');
+      try {
+        // Try to use real Gemini API
+        console.log('Attempting to use real Gemini API');
+        result = await generateCreatureImage(uploadedImage.preview);
+      } catch (apiError) {
+        console.log('API call failed, using mock:', apiError.message);
+        // Fallback to mock function
+        result = await generateMockCreatureImage(uploadedImage.preview);
+      }
+
+      if (result.success) {
+        setGeneratedImage({
+          description: result.description,
+          imageUrl: result.imageUrl || uploadedImage.preview // Fallback to original image
+        });
+      } else {
+        setError('Failed to generate creature. Please try again.');
+      }
     } catch (err) {
-      setError('Failed to create your 3D creature. Please try again.');
+      console.error('Generation error:', err);
+      setError(err.message || 'Failed to create your 2D creature. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -50,11 +68,13 @@ export const useImageUpload = () => {
 
   const clearUpload = () => {
     setUploadedImage(null);
+    setGeneratedImage(null);
     setError('');
   };
 
   return {
     uploadedImage,
+    generatedImage,
     isLoading,
     error,
     fileInputRef,

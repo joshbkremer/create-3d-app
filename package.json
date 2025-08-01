@@ -1,11 +1,11 @@
 {
   "name": "create-3d-app",
   "version": "0.1.0",
-
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.x.x",
     "@emotion/styled": "^11.x.x",
+    "@google/genai": "^1.12.0",
     "@mui/icons-material": "^5.x.x",
     "@mui/material": "^5.x.x",
     "@testing-library/dom": "^10.4.1",

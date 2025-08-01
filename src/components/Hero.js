@@ -19,6 +19,7 @@ import { useImageUpload } from '../hooks/useImageUpload';
 const Hero = () => {
   const {
     uploadedImage,
+    generatedImage,
     isLoading,
     error,
     fileInputRef,
@@ -134,6 +135,9 @@ const Hero = () => {
 
         {uploadedImage && (
           <Box sx={{ mt: 3, textAlign: 'center' }}>
+            <Typography variant="h6" sx={{ mb: 2, color: '#1F2937', fontWeight: 600, fontFamily: '"Nunito", sans-serif' }}>
+              Your Original Drawing
+            </Typography>
             <Card sx={{ borderRadius: 2, overflow: 'hidden', maxWidth: 350, mx: 'auto' }}>
               <CardMedia
                 component="img"
@@ -148,6 +152,108 @@ const Hero = () => {
                 </Typography>
               </CardContent>
             </Card>
+          </Box>
+        )}
+
+        {generatedImage && (
+          <Box sx={{ mt: 4, textAlign: 'center' }}>
+            <Typography variant="h6" sx={{ 
+              mb: 3, 
+              color: '#1F2937', 
+              fontWeight: 600, 
+              fontFamily: '"Nunito", sans-serif',
+              fontSize: { xs: '1.1rem', md: '1.25rem' }
+            }}>
+              ✨ Your Generated 2D Creature ✨
+            </Typography>
+            
+            {/* Exciting container with flare effects */}
+            <Box sx={{ 
+              position: 'relative',
+              maxWidth: 500,
+              mx: 'auto',
+              mb: 3,
+              p: 3,
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%)',
+              borderRadius: 4,
+              border: '2px solid rgba(99,102,241,0.3)',
+              boxShadow: '0 8px 32px rgba(99,102,241,0.2), 0 0 20px rgba(139,92,246,0.1)',
+              backdropFilter: 'blur(10px)',
+              animation: 'pulse 2s ease-in-out infinite',
+              '@keyframes pulse': {
+                '0%, 100%': {
+                  boxShadow: '0 8px 32px rgba(99,102,241,0.2), 0 0 20px rgba(139,92,246,0.1)',
+                },
+                '50%': {
+                  boxShadow: '0 8px 32px rgba(99,102,241,0.4), 0 0 30px rgba(139,92,246,0.3)',
+                },
+              },
+            }}>
+              {/* Sparkle effects */}
+              <Box sx={{
+                position: 'absolute',
+                top: -10,
+                left: -10,
+                width: 20,
+                height: 20,
+                background: 'radial-gradient(circle, #FFD700 0%, transparent 70%)',
+                borderRadius: '50%',
+                animation: 'sparkle 3s ease-in-out infinite',
+                '@keyframes sparkle': {
+                  '0%, 100%': { opacity: 0.3, transform: 'scale(0.8)' },
+                  '50%': { opacity: 1, transform: 'scale(1.2)' },
+                },
+              }} />
+              <Box sx={{
+                position: 'absolute',
+                top: 20,
+                right: -15,
+                width: 15,
+                height: 15,
+                background: 'radial-gradient(circle, #FF69B4 0%, transparent 70%)',
+                borderRadius: '50%',
+                animation: 'sparkle 2.5s ease-in-out infinite 0.5s',
+                '@keyframes sparkle': {
+                  '0%, 100%': { opacity: 0.3, transform: 'scale(0.8)' },
+                  '50%': { opacity: 1, transform: 'scale(1.2)' },
+                },
+              }} />
+              <Box sx={{
+                position: 'absolute',
+                bottom: 10,
+                left: '50%',
+                width: 12,
+                height: 12,
+                background: 'radial-gradient(circle, #00CED1 0%, transparent 70%)',
+                borderRadius: '50%',
+                animation: 'sparkle 3.5s ease-in-out infinite 1s',
+                '@keyframes sparkle': {
+                  '0%, 100%': { opacity: 0.3, transform: 'scale(0.8)' },
+                  '50%': { opacity: 1, transform: 'scale(1.2)' },
+                },
+              }} />
+              
+              {/* The generated image */}
+              <Box
+                component="img"
+                src={generatedImage.imageUrl}
+                alt="Generated 2D creature"
+                sx={{
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '400px',
+                  objectFit: 'contain',
+                  borderRadius: 2,
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                  transition: 'transform 0.3s ease',
+                  '&:hover': {
+                    transform: 'scale(1.02)',
+                  },
+                }}
+              />
+            </Box>
+            
+
           </Box>
         )}
 
@@ -181,7 +287,7 @@ const Hero = () => {
               }
             }}
           >
-            {isLoading ? <CircularProgress size={24} color="inherit" /> : 'Create My 3D Creature!'}
+            {isLoading ? <CircularProgress size={24} color="inherit" /> : 'Create My 2D Creature!'}
           </Button>
         </Box>
       </Paper>
