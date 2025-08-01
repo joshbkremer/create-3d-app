@@ -97,10 +97,10 @@ const Hero = () => {
           />
           <BrushIcon sx={{ fontSize: 60, color: '#6366F1', mb: 2 }} />
           <Typography variant="h5" sx={{ mb: 2, color: '#1F2937', fontWeight: 600, fontFamily: '"Nunito", sans-serif' }}>
-            Click here to upload your child's drawing!
+            Click here to upload your drawing!
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ fontFamily: '"Nunito", sans-serif' }}>
-            Take a photo of their whimsical creature drawing
+            Take a photo of your whimsical creature drawing
           </Typography>
         </Box>
 

@@ -8,7 +8,7 @@ import {
 export const PROCESS_STEPS = [
   {
     title: "Step 1: Imagined Creature",
-    description: "Upload your hand-drawn creature or realistic creature image.",
+    description: "Upload your hand-drawn creature or pet image.",
     icon: <UploadIcon />,
     image: "/step1.png",
     color: "#10B981"
