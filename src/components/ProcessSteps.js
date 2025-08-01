@@ -59,7 +59,7 @@ const ProcessSteps = () => {
                 }}>
                   {step.icon}
                 </Box>
-                <Typography variant="h6" sx={{ color: 'white', fontWeight: 600, fontFamily: '"Nunito", sans-serif', fontSize: '0.9rem' }}>
+                <Typography variant="h6" sx={{ color: 'white', fontWeight: 600, fontFamily: '"Nunito", sans-serif', fontSize: '1.2rem' }}>
                   {step.title}
                 </Typography>
               </Box>
@@ -168,7 +168,7 @@ const ProcessSteps = () => {
                 }}>
                   {step.icon}
                 </Box>
-                <Typography variant="h6" sx={{ color: 'white', fontWeight: 600, fontFamily: '"Nunito", sans-serif', fontSize: '0.9rem' }}>
+                <Typography variant="h6" sx={{ color: 'white', fontWeight: 600, fontFamily: '"Nunito", sans-serif', fontSize: '1.2rem' }}>
                   {step.title}
                 </Typography>
               </Box>

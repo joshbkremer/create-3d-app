@@ -7,14 +7,14 @@ import {
 
 export const PROCESS_STEPS = [
   {
-    title: "Step 1: Imagined Creature",
+    title: "Step 1: Dream up a Creature",
     description: "Upload your hand-drawn creature or pet image.",
     icon: <UploadIcon />,
     image: "/step1.png",
     color: "#10B981"
   },
   {
-    title: "Step 2: 2D Creature Creation",
+    title: "Step 2: Magical 2D Creature Creation",
     description: "Our AI transforms the drawing into a clean, colorful 2D creature while preserving your artistic vision and style.",
     icon: <TransformIcon />,
     image: "/step2.png",
