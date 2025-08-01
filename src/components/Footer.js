@@ -27,13 +27,29 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
           <Grid item xs={12} sm={6}>
-            <Typography variant="body2" color="text.secondary" sx={{ 
-              fontFamily: '"Nunito", sans-serif',
-              fontSize: { xs: '0.75rem', sm: '0.875rem' },
-              textAlign: { xs: 'center', sm: 'left' }
-            }}>
-              Copyright © 2025 Dream to Paint Ltd.
-            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', sm: 'flex-start' } }}>
+              <Box
+                component="img"
+                src="/logo.png"
+                alt="Dream to Paint Logo"
+                sx={{
+                  height: { xs: 20, sm: 24 },
+                  width: 'auto',
+                  mr: 1,
+                  borderRadius: 1,
+                  opacity: 0.7
+                }}
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+              <Typography variant="body2" color="text.secondary" sx={{ 
+                fontFamily: '"Nunito", sans-serif',
+                fontSize: { xs: '0.75rem', sm: '0.875rem' }
+              }}>
+                Copyright © 2025 Dream to Paint Ltd.
+              </Typography>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box sx={{ 

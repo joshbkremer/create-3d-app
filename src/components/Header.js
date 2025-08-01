@@ -9,7 +9,6 @@ import {
   Select,
   MenuItem
 } from '@mui/material';
-import { Pets as PetsIcon } from '@mui/icons-material';
 
 const Header = () => {
   return (
@@ -23,7 +22,22 @@ const Header = () => {
     }}>
       <Toolbar>
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-          <PetsIcon sx={{ color: '#6366F1', fontSize: { xs: 24, md: 32 }, mr: 1 }} />
+          <Box
+            component="img"
+            src="/logo.png"
+            alt="Dream to Paint Logo"
+            sx={{
+              height: { xs: 32, md: 40 },
+              width: 'auto',
+              mr: 2,
+              borderRadius: 2,
+              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
+            }}
+            onError={(e) => {
+              // Fallback to text if image fails to load
+              e.target.style.display = 'none';
+            }}
+          />
           <Typography variant="h6" sx={{ 
             color: '#1F2937', 
             fontWeight: 'bold', 

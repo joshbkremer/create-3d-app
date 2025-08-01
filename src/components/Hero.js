@@ -28,6 +28,34 @@ const Hero = () => {
 
   return (
     <Box sx={{ textAlign: 'center', mb: 6 }}>
+      {/* Logo Display */}
+      <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center' }}>
+        <Box
+          component="img"
+          src="/logo.png"
+          alt="Dream to Paint Logo"
+          sx={{
+            height: { xs: 120, sm: 160, md: 200 },
+            width: 'auto',
+            borderRadius: 3,
+            filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.3))',
+            animation: 'float 6s ease-in-out infinite',
+            '@keyframes float': {
+              '0%, 100%': {
+                transform: 'translateY(0px)',
+              },
+              '50%': {
+                transform: 'translateY(-10px)',
+              },
+            },
+          }}
+          onError={(e) => {
+            // Fallback to text if image fails to load
+            e.target.style.display = 'none';
+          }}
+        />
+      </Box>
+      
       <Typography 
         variant="h2" 
         component="h1" 
